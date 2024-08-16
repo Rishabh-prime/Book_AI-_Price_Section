@@ -1,0 +1,215 @@
+:root {
+    /* !! Dark Mode (Default) */
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --header-background: #6366f1;
+    --nav-background: #1e293b;
+    --section-background: #1e293b;
+    --border-color: #334155;
+    --highlight-color: #22d3ee;
+    --secondary-color: #a5b4fc;
+    --button-background: #22d3ee;
+    --button-text-color: #0f172a;
+}
+
+body.light-mode {
+    /* ! Light Mode Colors */
+    --background-color: #ffffff; 
+    --text-color: #1f2937; 
+    --header-background: #4a5568; 
+    --nav-background: #e2e8f0;
+    --section-background: #f7fafc;
+    --border-color: #cbd5e0; 
+    --highlight-color: #3182ce; 
+    --secondary-color: #2d3748; 
+    --button-background: #3182ce; 
+    --button-text-color: #ffffff; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+h2, h3, h4 {
+    margin-top: 2rem;
+    color: var(--secondary-color);
+}
+
+header {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: var(--header-background);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.nav-bar {
+    background-color: var(--nav-background);
+    padding: 1rem ;
+    position: sticky;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin: 0.5rem 1rem;
+}
+
+.nav-bar ul li:hover a {
+    color: var(--highlight-color);
+}
+
+.nav-bar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: var(--section-background);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+/* Authentication Section */
+pre, code {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--section-background);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    line-height: 2.3;
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #2b6cb0; /* Slightly darker blue for hover */
+    transform: translateY(-2px);
+}
+
+#apiKeyDisplay {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--section-background);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    border: 1px solid var(--border-color);
+    word-break: break-all;
+}
+
+/* Endpoints */
+.http-method {
+    background-color: var(--highlight-color);
+    color: var(--button-text-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.endpoint {
+    background-color: var(--header-background);
+    color: var(--button-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--header-background);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.parameter-table td:first-child {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        padding: 0 1rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+    table, th, td {
+        font-size: 0.85rem;
+    }
+}
