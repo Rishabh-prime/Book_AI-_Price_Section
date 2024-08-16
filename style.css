@@ -133,7 +133,7 @@ button {
 }
 
 button:hover {
-    background-color: #2b6cb0; /* Slightly darker blue for hover */
+    background-color: #2b6cb0; 
     transform: translateY(-2px);
 }
 
